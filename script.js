@@ -1,10 +1,11 @@
 import * as THREE from 'three'
 import { Texture } from 'three'
+import GLTFLoader from 'gltfloader'
 
 const   scene = new THREE.Scene()
 const   camera = new THREE.PerspectiveCamera(70, iw / ih)
-const   geometry = new THREE.BoxGeometry(1, 1, 1)
-const   texture = new THREE.TextureLoader().load('diamond.jpg')
+const   geometry = await GLTFLoader.loadGeometry('mario.glb')
+const   texture = new THREE.TextureLoader().load('mario.png')
 const   material = new THREE.MeshPhongMaterial( {map: texture} )
 const   mesh = new THREE.Mesh(geometry, material)
 
@@ -22,8 +23,8 @@ loop()
 
 function loop() {
     requestAnimationFrame(loop)
-    mesh.rotation.y += 0.001
-    mesh.rotation.x += 0.005
+    mesh.rotation.y += 0
+    mesh.rotation.x += 0
     renderer.render(scene, camera)
 }
 
