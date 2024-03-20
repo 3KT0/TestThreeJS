@@ -4,7 +4,8 @@ import GLTFLoader from 'gltfloader'
 
 const   scene = new THREE.Scene()
 const   camera = new THREE.PerspectiveCamera(70, iw / ih)
-const   mesh = await GLTFLoader.loadObject('bibi.glb','bibi')
+const   mesh = await GLTFLoader.loadObject('bibi2.glb','bibi')
+console.log(mesh)
 const   texture = new THREE.TextureLoader().load('bibi.png')
 mesh.material = new THREE.MeshPhongMaterial( {map: texture, shininess: 0} )
 
