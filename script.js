@@ -4,9 +4,9 @@ import GLTFLoader from 'gltfloader'
 
 const   scene = new THREE.Scene()
 const   camera = new THREE.PerspectiveCamera(70, iw / ih)
-const   geometry = await GLTFLoader.loadGeometry('mario.glb')
-const   texture = new THREE.TextureLoader().load('mario.png')
-const   material = new THREE.MeshPhongMaterial( {map: texture} )
+const   geometry = await GLTFLoader.loadGeometry('bibi.glb')
+const   texture = new THREE.TextureLoader().load('bibi.png')
+const   material = new THREE.MeshPhongMaterial( {map: texture, shininess: 0} )
 const   mesh = new THREE.Mesh(geometry, material)
 
 const   light = new THREE.PointLight(0xeeeeee)
