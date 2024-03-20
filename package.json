@@ -1,0 +1,14 @@
+{
+  "name": "threedemo",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^4.5.2"
+  },
+  "dependencies": {
+    "gltfloader": "github:codeurdenuit/GLTFLoader",
+    "three": "^0.143.0"
+  },
+  "author": "codeur de nuit"
+}
