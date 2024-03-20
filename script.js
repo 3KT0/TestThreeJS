@@ -29,7 +29,7 @@ function loop() {
     requestAnimationFrame(loop)
     const dt = clock.getDelta()
     mixer.update(dt)
-    mesh.rotation.y += 0.001
+    mesh.rotation.y += 0
     mesh.rotation.x += 0
     renderer.render(scene, camera)
 }
